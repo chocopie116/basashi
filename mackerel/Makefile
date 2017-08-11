@@ -2,7 +2,7 @@ MAKEFLAGS+=--no-print-directory
 REDIS=$(shell which redis-cli)
 REDIS_KEY="celery"
 time=$(shell date +%s)
-env=../.env
+env=./.env
 serviceName=test
 api=
 
@@ -10,10 +10,13 @@ api=
 # for mac. please install findutils
 post:
 	. $(env) && $(MAKE) sound  | \
-		xargs -iDECIBEL $(MAKE) service/metric size=DECIBEL api=$$MACKEREL_API_KEY
+		gxargs -iDECIBEL $(MAKE) service/metric size=DECIBEL api=$$MACKEREL_API_KEY
 
-queuesize:
-	@echo 100
+setup:
+	cp -f .env.sample .env
+
+sound:
+	@echo $$RANDOM
 
 service/metric:
 	@curl "https://mackerel.io/api/v0/services/$(serviceName)/tsdb" \
