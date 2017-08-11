@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+* * * * * make -C /Users/t-kajinuma/.go/src/github.com/chocopie116/sound-tracker/mackerel post >> /tmp/mackrel_post.log
