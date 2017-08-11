@@ -23,6 +23,6 @@ service/metric:
 		-X POST \
 		--silent \
 		--show-error \
-		-d '[{"name":"celery_queue_size", "time": $(time), "value": $(size)}]' \
+		-d '[{"name":"decibel", "time": $(time), "value": $(size)}]' \
 		-H 'Content-Type: application/json' \
 		-H 'X-Api-Key: $(api)'
