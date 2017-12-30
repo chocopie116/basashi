@@ -1,0 +1,6 @@
+docutils==0.14
+lockfile==0.12.2
+PyAudio==0.2.11
+pydub==0.20.0
+python-daemon==2.1.2
+soundmeter==0.1.3
