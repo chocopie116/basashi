@@ -6,7 +6,7 @@ install: venv
 	$</bin/pip install requests
 
 run:
-	source venv/bin/activate && source .env && python soundmeter.py
+	@source venv/bin/activate && source .env && python soundmeter.py
 
 venv:
 	$(MAKE) virtualenv
