@@ -13,7 +13,7 @@ if os.environ.get('MACKEREL_AGENT_PLUGIN_META') == '1':
     #TODO mackrel agent
     sys.exit()
 
-
+params = []
 for line in output.split("\n"):
     m = re.match(r"^\s+(min|max|avg):\s+(\d+)", line)
     if m is not None:
