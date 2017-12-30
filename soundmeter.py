@@ -6,7 +6,7 @@ import time
 import requests
 import json
 
-cmd = '/usr/local/bin/soundmeter -s 10 -c'
+cmd = '/usr/local/bin/soundmeter -s 30 -c'
 output = commands.getoutput(cmd)
 
 if os.environ.get('MACKEREL_AGENT_PLUGIN_META') == '1':
