@@ -20,7 +20,7 @@ for line in output.split("\n"):
             "value": int(m.groups()[1])
             })
 
-serviceName = 'test'
+serviceName = 'room noice sound RMS'
 appendedHeaders = {
         "Content-Type": "application/json",
         'X-Api-Key': os.environ.get('MACKEREL_API_KEY')
