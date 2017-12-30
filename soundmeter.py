@@ -35,7 +35,7 @@ if os.environ.get('MACKEREL_AGENT_PLUGIN_META') == '1':
     sys.exit()
 
 # notice mackerel-agentのpluginのcommandは，30秒でtimeoutになる
-cmd = '/usr/local/bin/soundmeter -s %s -c' % os.getenv('COLLECT_SOUND_SECONDS', 3)
+cmd = '/usr/local/bin/soundmeter -s %s -c' % os.getenv('COLLECT_SOUND_SECONDS', 25)
 output = commands.getoutput(cmd)
 
 time = time.time()
