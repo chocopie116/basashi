@@ -13,7 +13,7 @@ if os.environ.get('MACKEREL_AGENT_PLUGIN_META') == '1':
     #TODO mackrel agent
     sys.exit()
 
-serviceName = 'test'
+serviceName = 'room-noice-RMS'
 appendedHeaders = {"Content-Type": "application/json", 'X-Api-Key': os.environ.get('MACKEREL_API_KEY')}
 
 for line in output.split("\n"):
